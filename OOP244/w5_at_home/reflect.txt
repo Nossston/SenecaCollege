@@ -1,0 +1,41 @@
+/**************
+ ///////////////////////////////////////////////////////////
+ // Name        Date    Reason
+ // Liu,Yu-Che  6/13    w5_at_home
+ ///////////////////////////////////////////////////////////
+ **********************************************************/
+
+1.The operator+ returns a Fraction object. Explain why this operator should not return a reference to a Fraction object (like operator+=). 
+	This operator + will not return a reference because we do not want to change the original value of variables. For instance, 2+3; after the addition made, 2 and 3 should remain the same. We only want to see 5 as the outcome; nevertheless, operator+= is going to return a reference. We want to change the value after the calculation is done, and that is why += would seem different compare with other operators. 
+
+2.List the temporary objects in the tester module (the temporary objects are those that have no name and are removed from memory immediately after their creation; put messages in the constructors/destructor to reveal them). 
+	2 temporary objects in this case, which are in: (a+b) and (b+d). They are constructed when the operator returns and destroyed after display function is called. The question is only focus on the tester(main) file, so the answers are only these 2 objects. 
+
+3.List the simplifications that you made to your class to minimize duplication. 
+
+My old long code in int Fraction::min() const{
+     if(numerator>denominator)
+     return denominator;
+     else
+     return numerator;
+}
+
+but it can be minimize to :
+    return numerator < denominator ? numerator : denominator;
+
+
+Another one is when I want to call the constructor:
+
+/* long way:
+     numerator=0;
+     denominator=0;
+     */
+but it can be:
+      *this = Fraction();
+
+
+
+
+Quiz 4 Reflection:
+4.When should you overload an operator as a member function rather than a helper?
+When we want to add or subtract data from original object.

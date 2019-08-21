@@ -1,0 +1,30 @@
+/**************
+ ///////////////////////////////////////////////////////////
+ // Name        Date    Reason
+ // Liu,Yu-Che  6/10    w4_at_home
+ ///////////////////////////////////////////////////////////
+ **********************************************************/
+1) What is a safe empty state? Could you define a safe empty state that differs from the empty state that you defined? 
+	As Pete Becker pointed out, it is you to decide what safe empty state means for your own data type. In the default constructor, the compiler stores random values inside. In our coding, we set values to 0 or \0. So in other words, I can define a different safe empty state with various values, as long as they are not garbage.  
+2)  Identify the parts of your source code where to minimized code duplication. 
+	
+	In my code, whenever I need to set the members to safe empty state, I can call the constructor() that I made. By this way, I do not type the same thing over and over again. I did not realize this duplication happened in my code. While I was doing the home portion, I found I typed a lot of same statements, and I immediately call the function instead of duplication.  
+3)  The canTravelWith(...) member function accesses the private data of the object referenced in its parameter. Explain why C++ allows this access. 
+	This is due to the fact that this function is inside the same class, the class which contains the private members that we desire to access to. If this function is outside the class, it no longer has the permission to modify the member data. The exception would be using Friendship. 
+4)  What statement did you add to ensure that the strncpy(...) function executes correctly? 
+	I put null terminator in the end of strings after strncpy(…) is succeed. This can ensure the overflow chars will not be stored. Even the string is less than 19 and we stored 2 null terminators in a single string, it is harmless since the compiler will not look after the first null terminator. 
+5)  Explain what you have learned in this workshop. 
+	I have learnt the important concept this week is the safe empty state. Before we store the input, we can just call the constructor that we made. Once the data is invalid, the constructor will set the value safe. 
+	An interesting fact I learn is checking condition of this line 27 in Passenger.cpp:
+if (cname != nullptr && cname[0] != ‘\0’ .)
+Before I asked for help, my code was: if (cname[0] != ‘\0‘ && cname != nullptr). This one causes a weird bug. The program can run, but cannot work properly. Fortunately, my friend told me the answer: because if cname points to a null address, the compiler cannot check the first element is null terminator or not. Therefore, we need a correct order. I consider this bug is a luck for me to learn. Last time I learned the importance of order in programming was learning the flag in the C. This concept is really essential in programming language. 
+
+
+
+Quiz 3 Reflection:
+
+1. What is the difference between a class and an object?
+A class is a template for objects. An object is a member or an "instance" of a class. 
+
+4. When is a destructor invoked?
+It is invoked right before the object goes out of scope.

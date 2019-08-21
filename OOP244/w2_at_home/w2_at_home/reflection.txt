@@ -1,0 +1,25 @@
+
+/* -------------------------------------------
+ Name: Yu-Che,Liu
+ Student number:134379189
+ Email: yliu545@myseneca.ca
+ Section:SCC
+ Date:5/26
+ ---------------------------------------------- */
+
+ Why do you need to allocate new dynamic memory when you increase the size of an existing array of dynamically allocated memory? 
+    
+    The array we set is like a train. When the train starts running, if we want to add one more car, we cannot immediately do that; the reason is that train is on the way, and the only we can adjust this situation is to create another train for the larger amount of people. 
+    I was stuck for this question for a while. I was thinking of increasing the size of an array was not difficult. We could just change the size value larger. To be more specific, in C, I can initialize an array, says: int a[3]. When the time I need more “carriage” inside the array, I could just go back to that line and type: int a[4]. After I did some research, I found out that what I had done was the same as starting a new train; the compiler did the rest for me. Therefore, when we declare an array, we need to know how many elements are going to be used. If we need more spaces, the only way, for now, is creating, copying and deleting the array. Unless, we use the vector function, but we have not learnt that yet. 
+2)  The Kingdom structure stores the name of the kingdom in an array of characters. At the end of the program, we do not use the delete operator to deallocate the memory occupied by the name itself. Why don’t we need to use the delete operator on this array itself? 
+     The scope means the lifetime of a variable can live. A char array only lives when a program runs. Thus, we do not need to type extra lines to clean the memories occupied by a char array.  
+
+3)  There are two display(...) function definitions. How does the compiler know which definition to call from your main function? 
+    It tells from the types of parameters in a function declaration. In this case, these display functions own different numbers of parameters, one has 1 parameter, one has 2 parameters. Including types, orders and combinations are clues for the compiler to understand which function we are calling even if those functions have the same names.   
+4)  Describe what have you have learned in this workshop. 
+    The dynamic allocation must play a huge role, at least for me, this week. New commands called new, delete, and using & instead of * is such a relief for us. Most of all, learning how memories work is still a tough task for me. I enjoy coding and watching a program runs successfully, nevertheless, to understand “allocation” took me some time and the process was not fun. Because computers’ memories are limited resources, we need to organize memories when we are dealing with them. Otherwise, the program can run forever until it reaches the end. 
+
+5) Quiz 2 Reflection 
+Number of incorrect answers: 1
+Question: 5. What is an overloading function?
+    The overloading function shares the same name with other functions. 

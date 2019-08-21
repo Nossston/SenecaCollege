@@ -1,0 +1,52 @@
+/**********************************************************
+ // Workshop 3: Classes and Privacy
+ // w3_at_home.cpp
+ // Version 3.0
+ // 2019/05/19
+ // Cornel
+ // Description
+ // This workshop demonstrates classes in C++ and
+ // how member variables are defined privately, but
+ // accessed through public member functions
+ //
+ // Revision History
+ ///////////////////////////////////////////////////////////
+ // Name            Date                  Reason
+ // Liu,Yu-Che      2019/05/30            w3_at_home
+ ///////////////////////////////////////////////////////////
+ **********************************************************/
+
+
+ Explain what is the difference between a null string and an empty string?  
+Example: char null[6]; // it’s a null array.
+char empty[6] = { ‘\0’ }; // it’s an empty array.
+
+A null array does not have a null character, but an empty array does. Therefore, the length of an empty string is zero, even though it has one element. On the other hand, the declared null string has allocated 6 elements, but did not assign any values. If we use strcmp() to test, the result would be: they are not the same string.
+
+// code:
+if( strcmp(empty,null)==0 )
+        puts("Strings are the same");
+    else
+        puts("Strings are not the same”); // this is the outcome.
+
+
+2)  Your class declares two member functions named set(...). In C, this would  generate an error. Name the feature of C++ that allows this. 
+
+It is called “overloading”. This would generate an error in C, but not in C++. The compiler tells the difference from parameters. In this case, our set() functions have no same parameter types; thus, C++ can know which we are calling when we pass values. 
+3)  For the at-home portion you had to change the logic that validates a SIN. How would you design your class in such a way that if a new update to the validation logic is necessary, you don’t have to change anything in the function CRA_Account::set(…)?
+
+With another function “set()” but with different combination of parameters. By doing so, we can have a new logic inside, and nothing is modifies in the original set functions. 
+For instance, with the different order: 
+CRA_Account::set(int SIN,const char* familyName, const char* givenName);
+In this function, we can upload our logic to this new function without changing things. 
+
+ 4) What have you learned in completing this workshop? 
+
+I have practiced with more concepts in the C++ this week, which is great. Since it is a new language, it takes some time to understand the ideas. The most difficult part for me was not the logic of validating the SIN, but the concept of “object”. Especially when I was coding an object in a class, I asked others for help. I spent more time understanding the lab portion than finishing the home one. Fortunately, I now get some basic ideas of how this works. Calling a variable with a right pathname, I fully understand it now. In addition, we reviewed the functions: strcpy(), strncpy(), fixed, precision().
+
+Quiz 2 Reflection:
+
+What are the three classes of member functions for a structure?
+	queries, modifiers, specials.
+2. What is the scope of a member function?
+	The scope of a member function is defined by the scope of its class, and a member function can access any other member within the same class.
