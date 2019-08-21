@@ -1,0 +1,32 @@
+
+///////////////////////////////////////////////////////////
+// Name        Date    Reason
+// Liu,Yu-Che  7/12    w7_at_home
+///////////////////////////////////////////////////////////
+
+Does the Hero class need to know about the existence of the SuperHero class? (Hint: search for “SuperHero” in Hero.cpp) 
+
+No, it does not know anything about the SuperHero since SH is the “child”. For a child, he/she must inherit something from their parents, but for the parents, they do not take anything from their child. 
+
+2. Does the SuperHero class need to know about the existence of the Hero class? (Hint: search for “Hero” in SuperHero.cpp) 
+
+Opposite to the first question, SuperHero must know the base class: Hero in this example. In our codes, we do not need to type the similar functions again. This way, we can save a lot of time. 
+
+3. The program prints out “Ancient Battle!” when two Heroes fight. It prints out “Super Fight!” when two SuperHeroes fight. When you made a Hero fight a SuperHero, what did it print out? 
+
+It will show the Ancient battle. The SuperHero contains the Hero variables and the extra ones, such as defend and bounsAttack. However, when a superhero faces a hero, they cannot use their superpower. Therefore, it will end up with 2 heroes fight, and the outcome is “Ancient Battle”.
+
+4. True or False: is the following definition for main valid?Explain. 
+      int main() {
+        Hero("Achilles", 20, 6) * Hero("Hector", 30, 5);
+} 
+
+True. In our Hero.cpp, we do have this operator to deal with two heroes fight. All arguments we pass are valid, so it will be true.
+
+5. True or False : is the following definition for main valid?Explain. 
+      int main() {
+       (Hero("Achilles", 20, 6) * Hero("Hector", 30, 5))
+* (Hero("Atalanta", 10, 3) * Hero("Hippolyta", 10, 2)); 
+} 
+
+It will be true. In our Hero.cpp, the *operator will return a Hero object. Thus, the outcome will be a valid one.  

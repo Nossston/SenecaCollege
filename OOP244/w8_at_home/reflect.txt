@@ -1,0 +1,10 @@
+
+///////////////////////////////////////////////////////////
+// Name        Date    Reason
+// Liu,Yu-Che  7/22    w8_at_home
+///////////////////////////////////////////////////////////
+What is the difference between an abstract base class and a concrete class?  The difference is, the former is a class that has pure virtual functions which contains no implementations. However, the latter one owns its implementations for concrete classes. 
+Identify the functions that shadow functions of the same name in your solution?  In my ChequingAccount.h: bool credit(double) ; bool debit(double); are shadow functions. We already have same ones in the Account.h. These functions are called when the complier reads the class name is belonged to the Chequing.
+Explain what have you learned in this workshop.  In this workshop, I learned many. Firstly, I created a header file without any long definition. That is a milestone for me. I used to created both .cpp and .h at same time.
+Secondly, the structure of this workshop is complicated. If I want to call a function, I have to call it right. The name and where it comes from are so important that I spent most of time on the locations of each functions. 
+Lastly, virtual functions are the key of this week, but at this movement, I only get some concept of how to use it correctly. I feel it is interesting to put =0 for functions, and {} for the destructor. This is mandatory. Therefore, pure virtual functions have its own rule when we want to create a base class.

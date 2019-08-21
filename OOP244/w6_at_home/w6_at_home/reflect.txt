@@ -1,0 +1,13 @@
+
+///////////////////////////////////////////////////////////
+// Name        Date    Reason
+// Liu,Yu-Che  7/04    w6_at_home
+///////////////////////////////////////////////////////////
+
+Why does the copy assignment operator check for self-assignment before doing anything else? What could go wrong if the operator doesn’t check for self-assignment?
+	The first step of creating a copy operator is always needed to check for self-assignment. If we forget to check, the deallocation statement will wipe out the access to the “rhs” data and we will not apply the line:   phone[i] = rhs.phone[i]; 
+
+2.List examples of how you avoided code duplication. 
+	The first code duplication I avoided is in the function:isValid(). Before I created this, I had to validated numbers with 10 lines coding. 
+	However, the logic inside the isValid function is also simplified. This is the second part where I try to avoid duplicating. When the first time I saw the question, I extracted digits as my 3rd workshop did. Unfortunately, that logic did not help me solve the problem this week since we are dealing with numbers instead of digits. This logic is much more clean and efficient. 
+	The third part is the conditional expression. I apply it into the return statements. Normally, I would set a if condition to return either true or false within more than one line. By using ternary operator, I can down the lines required into only one line. The examples are in line 51, 135 of my codes.

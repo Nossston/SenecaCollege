@@ -1,0 +1,15 @@
+
+
+///////////////////////////////////////////////////////////
+// Name        Date    Reason
+// Liu,Yu-Che  7/26   w9_at_home
+///////////////////////////////////////////////////////////
+What happens if you try to put your templated functions in Data.cpp? Does your source code compile if you move all functions to Data.h? Explain.
+If we move the template from header file to the cpp file, complier will not understand it and cause faults. Templates are not functions or classed, but a “pattern”. The compiler is not a human can see both header and cpp file at the same time, when it processes the file. Thus, it will see different functions even thought we know they are same one, which will cause fault.
+Move one templated function into ws9_lab.cpp. Does it work now? Do you need to define the template function above main(), before it is used, or can you define it below main()?
+All of them cannot work if we do not define it in the header file. The reason is we are using template functions within the Data.cpp. Thus, the problem is similar with the first question. The complier does not understand those functions when it compiles the Data.cpp.
+Could you have done this lab without templates, by just overloading your functions in Data.h to accept integer and double arguments? What is the advantage of using templates? 
+Yes, but it is a repetitive work. In this case, we are lucky that only two functions are work alike. However, once we are dealing with 50 functions, one change means 50 times modification. Therefore, by inserting templates, we are able to decrease the redundancy.  
+Are the following equivalent?  template<class T> 
+template<typename T> 
+Yes, they are same. However, I prefer typename if we are only dealing with unknown variables instead of class. Class is a specific type, codes do not like well if we have similar name inside. But in the end, they are equivalent. 
