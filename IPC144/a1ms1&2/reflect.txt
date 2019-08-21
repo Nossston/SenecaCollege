@@ -1,0 +1,39 @@
+
+/* -------------------------------------------
+ Name: Yu-Che,Liu
+ Student number:134379189
+ Email:yliu545@myseneca.ca
+ Section:SKK
+ Date:3/7
+ ----------------------------------------------
+ Assignment: 1
+ Milestone:  2
+ ---------------------------------------------- */
+
+Can you think of a more efficient way to ask a user to add the required information to each data field? Justify your thoughts with an example. 
+
+A more efficient way would be using functions because it is easier to modify and read. This week, I programmed a vast amount of lines to ask users to add required information; nevertheless, it was ugly to read basically was brought from the length of the program. If we could use functions for this milestone2, everything would look better. 
+An example would be “yes or no” question to put into a function. In my program, I used the switch and the question showed up for 5 times. With functions, those 8 lines that cover my switch expression would be contracted into one line; in that way, the whole program definitely is improved. 
+
+Discuss the differences between a C string and a primitive character array. What would happen if you attempt to display the contents of a primitive character array (not a C string) using the printf specifier “%s”? 
+
+They are really similar to each other. The only difference is a C string owns a null terminator while a primitive character array literally receives the input. An example:
+char a[]={‘H’,’i’}; // This is an array without a null terminator.
+char b[]=“I am a C string”; // This is a C string which has a terminator.
+For the second question, I tested in my Xcode:
+printf(“%s”,a); 
+The outcome was Hi, nothing was wrong, so my answer would be it is fine to use %s to display a primitive character array with %s.
+
+What you have learned from the milestone?
+
+This week, I learned how to scan characters input properly; also, I used the switch for yes or no question the first time. The hardest problem for me was the null terminator due to it is invisible. For each part of scanning, inputs are characters; storing them is usually without a null terminator. A problem will appear if we forget to put a null terminator. That is: skipping the second scan. 
+This problem was brought from the “Enter” key and a char array. Whenever a user types character(s), they go into the stdin. 
+Take my program for example: 
+    printf("Please enter the contact's first name: ");
+    scanf("%[^\n]s",name.firstName);
+    printf("Do you want to enter a middle initial(s)? (y or n): ");
+    scanf(“%c”,&input);
+After I type the first name, the C compiler will ignore the second scan. To be more specific, the second scan detects a character is entered, which is the “Enter” character. To correct it, we need to code:
+
+    scanf(“ %c”,&input); 
+By doing so, the scanf function will eat whitespaces and special characters, like enter.
