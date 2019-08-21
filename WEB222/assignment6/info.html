@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+   <meta charset="UTF-8" />
+   <title>Layout</title>
+   <link rel='stylesheet' href='normalize.css' >
+   <script src="info.js"></script>
+</head>
+<body>
+<div class=container>
+  <header>
+        <h1>Water Donation by Liu</h1>
+    </header>
+ 
+    <aside>
+        <h3>About</h3>
+        <ul>
+                <li><a href="honesty.html">Honesty</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="info.html">Credits</a></li>
+                <li><a href="info.html">OOP244</a></li>
+                <li><a href="info.html">About</a></li>
+            </ul>      
+      </aside>
+  <main>
+        <form id="info" name="form1"
+        action="https://httpbin.org/post" method="post" 
+        onsubmit='return formValidation()' >
+      <fieldset>
+        <legend>Register</legend>
+              
+          Frist Name: <input type="text" name="fname" id="fname" size="30" 
+             placeholder="Cap first, all Alphabet" required/>
+             <span class="errors" id="ferr"></span><br>  
+
+          Last Name: <input type="text" name="lname" id="lname" size="30"
+           placeholder="Cap first, all Alphabet" required/>
+           <span class="errors" id="lerr"></span><br>  
+           
+           UserName: <input type="text" name="uname" id="uname" size="31"
+            placeholder="Start with letter, at least 6 letters" required />
+            <span class="errors" id="uerr"></span><br> 
+            
+           
+            Password: <input type="password" name="pd" id="pd"  size="60"   
+           placeholder="must be 6 chars, start with a char, at least 1 digit and 1 uppercase" required /> 
+           <span class="errors" id="perr"></span><br> 
+           
+           Email: <input type="email" name="name3" id="email" size="30" required /> <br>  
+              
+           <label for="edulv">EducationLevel: </label>
+           <select name="edulv" id="edulv"  size=1 required > 
+                <option disabled selected value="">&nbsp;</option>                        
+                <option value="1">Technical Diploma</option>
+                <option value="2">College Diploma</option>
+                <option value="3">Bachelor's Degree</option>
+                <option value="4">Master's Degree </option>
+                <option value="5">Others</option>
+           </select>
+           <span class="errors" id="edulverr"></span>
+
+           <br>Education Status: <br>
+           <input type="radio" name="edust" id="edust" value="Graduated" checked />Graduated 
+           <input type="radio" name="edust" id="edust2" value="Current enrolled" />Current enrolled
+           <input type="radio" name="edust" id="edust3" value="Did not graduate" />Did not graduate 
+           <br>  
+           Age: <input type="text" name="age" id="age"  placeholder="only accept 18-60 " required /> 
+           <span class="errors" id="agerr"></span><br>
+
+           <button type="submit"> Submit </button>&nbsp;&nbsp;&nbsp;&nbsp;
+           
+           <button type="reset" value = "reset" onclick="clearerrors()"> Reset </button>
+           <input type="hidden" name="lastName" id="lastName" value="Liu" />
+           <input type="hidden" name="studentId" id="studentId" value="#134379189" />
+           <div id='errors'></div>    
+      </fieldset> 
+ </form>
+  </main>
+    <div class="adbar2">
+    </div>
+    <div class=clear></div>
+        <footer>
+        <h2>&copy; 2019 Liu,Yu-Che</h2>
+        </footer>
+  
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+
+    .container { 
+        max-width: 960px; 
+        margin: auto; 
+        background-image: url(back.jpg);
+        background-size:100% ; 
+        }
+        header{
+            height: 80px;
+        position: relative;
+        bottom: 8px;
+        background-color: #f0f0f0;
+        border: 1px solid black;
+         border-radius: 5px; 
+         font-family: Cambria, Cochin; 
+         background-image: url(cloud.jpg);
+         background-size:100%;
+        }
+    aside { 
+      width: 120px; 
+      height: 350px;
+      float: left; 		   
+      padding: 1em;		   
+      background-color: burlywood;
+      border: 1px solid black;
+      border-radius: 5px;
+      line-height: 2em;
+      font-family: Georgia;
+    }
+    
+    aside li a{
+        color:navy;
+    }
+    
+    main  { 
+      width: 500px; 
+      max-height: 400px;
+      float: left;
+      position: relative;
+      left: 30px;  
+      border: 1px solid black;
+      padding: 1%;
+      border-radius: 5px;
+      line-height: 2.5em;
+      font-size:13px ;
+      font-family: Courier;
+
+    }
+    .adbar { 
+        width: 220px;
+        height: 390px;
+        float :right;
+        background-image: url(ad.jpg); 
+        background-size: 220px 420px;
+        border: 1px solid black;
+        border-radius: 5px;
+
+       }
+    .adbar2 { 
+      width: 220px;
+      height: 390px;
+      float :right;
+      background-image: url(water.jpg); 
+      background-size: 220px 420px;
+      border: 1px solid black;
+      border-radius: 5px;
+      
+     }
+
+     .errors{
+        color:red;
+        font-size: 10px;
+        font-family: Courier;
+
+     }
+  
+    .clear { 
+      clear: both; }
+    
+    footer { 
+        background-color: #aaa; 
+        font-size: 12px;
+        font-family: 'Times New Roman', Times, serif ;
+        color:lightpink; }
+
+   
