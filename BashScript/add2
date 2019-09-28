@@ -1,0 +1,22 @@
+#!/bin/bash
+#add2
+
+sum=0
+if [ "$1" = "" ]
+then
+	echo -n "Enter numbers"
+	read number
+fi
+
+for number in $@
+do 
+sum=$((sum + number))
+echo $number | grep [^0-9+-] >/dev/null 
+if [ $? -eq 0 ]
+then
+
+	echo "Sorry, '$number' is not a number"
+	exit 1
+fi
+done
+echo "$sum"
