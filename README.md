@@ -4,10 +4,10 @@
   -**IPC144**: C
   -**BashScript**: using shell script
 
-2.Seconed Semester
+1.Seconed Semester
   -**WEB222**: HTML+JavaScript+CSS
   -**OOP244**: C++
 
-3.Third Semester
+1.Third Semester
   -**WEB322**: node.js
   -**OOP345**: C++
