@@ -1,0 +1,10 @@
+// Name: YuChe Liu
+// Seneca Student ID: 134379189
+// Seneca email: yliu545
+// Date of completion: 19th Sept , 2019
+
+1. the reason for the significant time difference between the copy and move operations
+The reason is simply due to the process is totally different. Imagine the difference of moving a house and building a new one. To move a house, we only need to change the position of that house. However, to build a same house, the time are way longer than the just moving it. This applies to the move operation at the same way. 
+
+
+2. I have learned this week of the workshop2 is more about file reading. Although we have learned a bit of file stream before, this week is still a challenge for me to come up the way of dealing with and fixing bugs. Fortunately, the codes are complicate but short to type. When I realized what is the question asking about, I came up with the way to finish it. 
