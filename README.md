@@ -4,11 +4,11 @@
   
   -**IPC144**: C
   
-  -**BashScript**: using shell script
+  -**ULI101**: Bash Shell Scripting projects
 
 ## 2.Seconed Semester, 2019 :sunny:
   
-  -**WEB222**: HTML+JavaScript+CSS
+  -**WEB222**: HTML + JavaScript + CSS
   
   -**OOP244**: C++
 
