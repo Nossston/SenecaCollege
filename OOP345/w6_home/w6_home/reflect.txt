@@ -1,0 +1,15 @@
+
+// Name: YuChe Liu
+// Seneca Student ID: 134379189
+// Seneca email: yliu545
+// Date of completion: 10/31 , 2019
+
+1.Why do you need to deallocate the dynamically allocated memory in your vector?
+	The vector we created in this workshop are pointers, and they are stored somewhere in the dynamical memories. If we do not deallocate them after using, we would have leak problem as we have learned in OOP244. 
+
+2. When building an object from the input file, different things can go wrong: the record represents an unknown type of vehicle, or record contains invalid data. How can the function loadData() detect what went wrong? Can you think at another solution than the one you have implemented?
+	Since we use try&catch block to handle the error, we can detect errors and customize the output message. We can have the same output with different method as we have discussed before in the reflect, which is simply if condition. However, it will be longer and not easy for others to understand the concept inside.
+
+3.In this workshop you had to use std::list<sdds::Vehicle*> and std::vector<sdds::Vehicle*> to store a collection of vehicles as pointers. Could you have used std::list<sdds::Vehicle> and std::vector<sdds::Vehicle> instead? Justify your answer!
+	Pointer of a container can avoid copying and allow us to do code polymorphic behavior. However, we have to make sure deallocate the memories before going out of scope. In our codes, the big reason to use pointer is we are passing lambda function as a parameter. When we are passing an object to different classes, we better use the pointer to prevent the copy happening. Using pointer can make sure that we are purely passing the original object.
+

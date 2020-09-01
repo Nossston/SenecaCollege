@@ -1,0 +1,19 @@
+
+// Name: YuChe Liu
+// Seneca Student ID: 134379189
+// Seneca email: yliu545
+// Date of completion: 11/7 , 2019
+
+list all the STL functions that you have used in this workshop; explain your reasoning for choosing each one, and not another.
+erase, for_each, accumulate, sort, find_if, copy_if, and count_if.
+
+erase is an easy way trim strings, I have used this for weeks. It is understandable for everyone and shorter than my original codes.
+for_each, sort, and accumulate are required to replace the manual loop.
+find_if is to find and count_if is for us create the size of a list of Songs. copy_if lets us code one line to the work.
+We do not use manual loop in here is obvious. First, our codes are simple. Second, practicing lambda function is good for us in this situation. Otherwise, we might use manual loop forever.
+
+present the advantages of using STL algorithms vs. implementing the functionality by yourself using loops.
+One of the advantages using STL is safety. We have coded for_loops for enormous times; however, it goes wrong sometimes. With STL algorithm, we can prevent those tiny mistakes from the beginning. 
+the function that sorts the collection of songs receives as a parameter the field name to use; this can create errors if the client specifies an invalid field (or misspells it). How would you redesign that function to prevent the client to specify an invalid string, allowing any error to be detected by the compiler?
+If we allow users to type, it will have many problems. In my opinion, we should provide choices for them instead of string input. We have done this in IPC144 ms5. The user can read a list and choose one of those. Program will return an error if the user does not send a number.
+

@@ -1,0 +1,19 @@
+// Name: YuChe Liu
+// Seneca Student ID: 134379189
+// Seneca email: yliu545
+// Date of completion: 11/13 , 2019
+
+the advantage that smart pointer syntax provides. Use example from your code to support your explanation.
+In my List.h, I accept the parameter from a unique_ptr to be pushed back into my vector. The magic part is the push_back function can read either ( push_back(rhs) ) or (  push_back(*rhs) ).
+They both work well as expected. In this part, I feel this smart pointer is really smart. We have no worries at memory leak or missing an asterisk. The <memory> handles everything well for us.
+
+
+the difference between raw and smart pointer syntax in your solution.
+They do not have huge difference since they are both pointers. There are only two lines are different; first one is declaration and second one is delete. The declaration we code before is like:
+                    Product* tmp = new Product( l_desc[i].desc, l_price[j].price);
+But we code in another way here:
+                    std::unique_ptr<Product> tmp = std::make_unique<Product>( l_desc[i].desc, l_price[j].price);
+
+Delete is done by the <memory> so we are free from it.
+
+

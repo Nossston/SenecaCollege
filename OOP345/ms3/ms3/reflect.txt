@@ -1,0 +1,10 @@
+
+//  Created by Noston Liu on 2019/11/23.
+//  Copyright © 2019 Noston. All rights reserved.
+//  134379189
+// YuChe-Liu
+
+
+While coding ms2 and ms1, I already feel the difficulty is not about coding but the reading. The completed work is not longer than workshop6, however, the instruction is too simple to understand. Doing ms3 must be the hardest one in this semester. First of all, it is not easy for me to test and debug. One function in LineManager can call other class functions, so if I have a bug in ms3 output, I have to test many times to find a minor bug within. Even though I have submitted the ms2 without error, I still find bugs while doing ms3, and that was challenging to find them out.
+
+Anyhow, these workshops we have done are really helpful and improve me into another level of “c++”. I realized my ability is much stronger when I was helping someone’s oop244 workshop. By coding and debuging for such a long time, I am really grateful for many people that have helped me. I feel to become a senior programmer is really about the ability of debugging. Wish I can become one of them in the near future.

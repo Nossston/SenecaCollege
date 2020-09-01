@@ -1,0 +1,18 @@
+
+// Name: YuChe Liu
+// Seneca Student ID: 134379189
+// Seneca email: yliu545
+// Date of completion: 7th Oct , 2019
+
+0. Before answering the questions, I need to describe the structure of the Restaurant in our workshop4. A restaurant has or has no reservation, so the relation between them is aggregation. 
+For the confirm sender, it must contain the information of reservation; therefore, the relation is composition. 
+
+1.the difference between the implementations of a composition and an aggregation.
+For composition(confirmSender, reservation), the base of it is reservation; thus, we cannot destroy the base and that is the reason we set the reservation array to const variable. 
+For aggregation(restaurant, reservation), the restaurant do not affected by the reservation. Restaurant can either have or have no reservation inside; therefore, we set the reservation array as modifiable private member.
+
+
+2.the difference between the implementations of move and copy functions in a composition and an aggregation.
+As I have mentioned, the difference is the “const” of the class member variables. When we are using move and copy functions inside the confirmation sender class, we are not allowed to change any address of the pointer arrays. To achieve the goal, we implement const_cast to modify the variable. 
+For aggregation, we code the same we have done in w2 workshop.
+

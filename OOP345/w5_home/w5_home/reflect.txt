@@ -1,0 +1,17 @@
+
+// Name: YuChe Liu
+// Seneca Student ID: 134379189
+// Seneca email: yliu545
+// Date of completion: 10/17 , 2019
+
+1. the difference between the implementations/utilizations of a functor and a lambda expression. When is appropriate to use each one?
+Functor is an overloading operator and we can use it unlimited times. Lambda expression can do the same thing as functor can do. However, the difference is that lambda does not require the class to implement. In our workshop, we declare one lambda expression in the main file and the functor is inside the Collection class. The appropriate time to use one of them is determined by the range of variable we are passing. If we only want variables from a certain class, we declare a functor. If we want a larger overloading function which can do the functor job, and access to variables, we choose lambda expression.
+2. the constructor for SpellChecker generates an exception in certain conditions. How would you change your code to achieve the same result, but without exceptions (both on the constructor and on the client side)? Compare the two solutions.
+The solution without error reporting is simply using if condition and cout the error message.  We try to open every file and if there is an error, we write the message to the client. 
+
+3. the classes Movie and Book contain almost identical logic in loading data from the file. How would you redesign the classes in order not to duplicate that logic?
+We can set a tag to each class. Movie will have “M”, and Book will have “B” in the value of new variable _tag. We have done this in OOP244, the workshop of two bank accounts. Therefore, in the Collection module, we can detect what is the class passing to us and we do not need duplicate the logic in two modules.
+
+4 the classes Movie and Book are instantiated from the main() function using a custom constructor, but they also contain a default constructor. Is the default constructor necessary? Could you remove it? Justify your answer.
+The reason is about the default setting in the c++. When we do not have any constructor for a class, the compiler would generate one for us. But once we create any constructor in the class, the default constructor will not be there for us. Having a default constructor is about safety, in my opinion, those extra codes are insurance for us. 
+In this workshop, however, we do need these 0 argument constructor. In my main.cpp line 59, 121, I declare two temps of each class. The compiler needs a default constructor to understand these temp arrays.

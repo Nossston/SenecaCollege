@@ -1,0 +1,28 @@
+In file included from /usr/local/gcc/9.1.0/include/c++/9.1.0/x86_64-pc-linux-gnu/bits/c++allocator.h:33,
+                 from /usr/local/gcc/9.1.0/include/c++/9.1.0/bits/allocator.h:46,
+                 from /usr/local/gcc/9.1.0/include/c++/9.1.0/list:61,
+                 from SongCollection.cpp:13:
+/usr/local/gcc/9.1.0/include/c++/9.1.0/ext/new_allocator.h: In instantiation of ‘void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = sdds::Song; _Args = {}; _Tp = std::_List_node<sdds::Song>]’:
+/usr/local/gcc/9.1.0/include/c++/9.1.0/bits/alloc_traits.h:482:2:   required from ‘static void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = sdds::Song; _Args = {}; _Tp = std::_List_node<sdds::Song>; std::allocator_traits<std::allocator<_Tp1> >::allocator_type = std::allocator<std::_List_node<sdds::Song> >]’
+/usr/local/gcc/9.1.0/include/c++/9.1.0/bits/stl_list.h:633:33:   required from ‘std::__cxx11::list<_Tp, _Alloc>::_Node* std::__cxx11::list<_Tp, _Alloc>::_M_create_node(_Args&& ...) [with _Args = {}; _Tp = sdds::Song; _Alloc = std::allocator<sdds::Song>; std::__cxx11::list<_Tp, _Alloc>::_Node = std::_List_node<sdds::Song>]’
+/usr/local/gcc/9.1.0/include/c++/9.1.0/bits/stl_list.h:1907:10:   required from ‘void std::__cxx11::list<_Tp, _Alloc>::_M_insert(std::__cxx11::list<_Tp, _Alloc>::iterator, _Args&& ...) [with _Args = {}; _Tp = sdds::Song; _Alloc = std::allocator<sdds::Song>; std::__cxx11::list<_Tp, _Alloc>::iterator = std::_List_iterator<sdds::Song>]’
+/usr/local/gcc/9.1.0/include/c++/9.1.0/bits/stl_list.h:1223:4:   required from ‘std::__cxx11::list<_Tp, _Alloc>::reference std::__cxx11::list<_Tp, _Alloc>::emplace_back(_Args&& ...) [with _Args = {}; _Tp = sdds::Song; _Alloc = std::allocator<sdds::Song>; std::__cxx11::list<_Tp, _Alloc>::reference = sdds::Song&]’
+/usr/local/gcc/9.1.0/include/c++/9.1.0/bits/stl_list.h:1857:4:   required from ‘void std::__cxx11::list<_Tp, _Alloc>::_M_default_initialize(std::__cxx11::list<_Tp, _Alloc>::size_type) [with _Tp = sdds::Song; _Alloc = std::allocator<sdds::Song>; std::__cxx11::list<_Tp, _Alloc>::size_type = long unsigned int]’
+/usr/local/gcc/9.1.0/include/c++/9.1.0/bits/stl_list.h:694:9:   required from ‘std::__cxx11::list<_Tp, _Alloc>::list(std::__cxx11::list<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = sdds::Song; _Alloc = std::allocator<sdds::Song>; std::__cxx11::list<_Tp, _Alloc>::size_type = long unsigned int; std::__cxx11::list<_Tp, _Alloc>::allocator_type = std::allocator<sdds::Song>]’
+SongCollection.cpp:126:34:   required from here
+/usr/local/gcc/9.1.0/include/c++/9.1.0/ext/new_allocator.h:145:20: error: no matching function for call to ‘sdds::Song::Song()’
+  145 |  noexcept(noexcept(::new((void *)__p)
+      |                    ^~~~~~~~~~~~~~~~~~
+  146 |        _Up(std::forward<_Args>(__args)...)))
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SongCollection.cpp:20:5: note: candidate: ‘sdds::Song::Song(std::string)’
+   20 |     Song::Song( std::string in){
+      |     ^~~~
+SongCollection.cpp:20:5: note:   candidate expects 1 argument, 0 provided
+In file included from SongCollection.cpp:16:
+SongCollection.h:22:12: note: candidate: ‘sdds::Song::Song(const sdds::Song&)’
+   22 |     struct Song {
+      |            ^~~~
+SongCollection.h:22:12: note:   candidate expects 1 argument, 0 provided
+SongCollection.h:22:12: note: candidate: ‘sdds::Song::Song(sdds::Song&&)’
+SongCollection.h:22:12: note:   candidate expects 1 argument, 0 provided
