@@ -17,3 +17,14 @@
   -**WEB322**: node.js
   
   -**OOP345**: C++
+  
+  
+---- 2020 Jan - Aug: Coop located at Tech-consultant company.
+  
+  
+## 4.Forth Semester, 2020 :maple_leaf:
+  
+  -**JAC444**: java (editor: IntelliJ)
+  
+  -**WEB444**: jQuery, React, XML
+  
