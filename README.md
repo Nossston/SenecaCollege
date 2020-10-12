@@ -19,7 +19,7 @@
   -**OOP345**: C++
   
   
----- 2020 Jan - Aug: Coop located at Tech-consultant company.
+# ---- 2020 Jan - Aug: Coop located at Tech-consultant company.
   
   
 ## 4.Forth Semester, 2020 :maple_leaf:
