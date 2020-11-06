@@ -97,17 +97,40 @@ public class Main extends Application {
         }
 
         AddHandler addHandler = new AddHandler();
-        bt[0].setOnAction(addHandler);
+        bt[0].setOnAction( e ->{
+            primaryStage.close();
+            addHandler.handle(e);
+        });
         FirstHandler firstHandler = new FirstHandler();
-        bt[1].setOnAction(firstHandler);
+        bt[1].setOnAction( e ->{
+            primaryStage.close();
+            firstHandler.handle(e);
+        });
         NextHandler nextHandler = new NextHandler();
-        bt[2].setOnAction(nextHandler);
+        bt[2].setOnAction( e ->{
+            primaryStage.close();
+            nextHandler.handle(e);
+        });
+//        bt[2].setOnAction(nextHandler);
         PreviousHandler previousHandler = new PreviousHandler();
-        bt[3].setOnAction(previousHandler);
+        bt[3].setOnAction( e ->{
+            primaryStage.close();
+            previousHandler.handle(e);
+        });
+//        bt[3].setOnAction(previousHandler);
         LastHandler lastHandler = new LastHandler();
-        bt[4].setOnAction(lastHandler);
+        bt[4].setOnAction( e ->{
+            primaryStage.close();
+            lastHandler.handle(e);
+        });
+//        bt[4].setOnAction(lastHandler);
         UpdateHandler updateHandler = new UpdateHandler();
-        bt[5].setOnAction(updateHandler);
+        bt[5].setOnAction( e ->{
+            primaryStage.close();
+            updateHandler.handle(e);
+        });
+
+//        bt[5].setOnAction(updateHandler);
 
         primaryStage.setTitle("WS5");
         Scene scene = new Scene(pane);
